@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  html,
+  body {
+    font-family: 'Plus Jakarta Sans', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #EFE9DF;
+    color: #231710;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Warm coffee-tinted OpenStreetMap tiles to match Cafe Map KG palette */
+.cafemap-tiles .leaflet-tile-pane {
+  filter: sepia(0.16) saturate(0.82) brightness(1.03) contrast(0.96);
+}
+
+.leaflet-container {
+  font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
+  background-color: #F4EFE6;
+}
+
+.cafe-custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(250, 247, 240, 0.78) !important;
+  color: #736459 !important;
+  padding: 1px 5px !important;
+  border-top-left-radius: 6px;
+}
+
+.leaflet-control-attribution a {
+  color: #382418 !important;
+}
+
+/* Hide scrollbars cleanly in horizontal carousels & phone viewport */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle pulse ring for user dot */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.45);
+    opacity: 0.12;
+  }
+}
+
+.user-location-pulse {
+  animation: softPulse 2.4s ease-in-out infinite;
+}

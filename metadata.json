@@ -1,0 +1,6 @@
+{
+  "name": "Cafe Map KG",
+  "description": "Real-time cafe crowd map for university students in Bishkek near KNU, KRSU, and AUCA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
